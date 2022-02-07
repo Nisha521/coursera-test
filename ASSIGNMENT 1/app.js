@@ -2,17 +2,17 @@
 (function () {
 
 angular.module('CheckLunch', [])
-.controller('CheckLunchController', CheckLunchController)
+.controller('CheckLunchController', LCController)
 
 
-CheckLunchController.$inject = ['$scope'];
+LCController.$inject = ['$scope'];
 function CheckLunchController($scope) {
   $scope.items = '';
-  $scope.msg = 'Please enter the data first';
+  $scope.msg = 'Please enter the data first...';
 
   $scope.checkText = function() {
     if ($scope.items.length == 0) {
-      $scope.msg = 'Please enter the data first';
+      $scope.msg = 'Please enter the data first...';
       return;
     } 
     else {
